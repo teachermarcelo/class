@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countries</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    .btn-lesson {
+      margin: 10px;
+      border-radius: 50px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    .btn-lesson:hover {
+      background-color: #0056b3;
+    }
+    .content-section {
+      margin-top: 30px;
+    }
+    .card-header {
+      background-color: #007bff;
+      color: white;
+      border-radius: 10px 10px 0 0;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #dc3545;
+    }
+    table {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container text-center mt-5">
+    <h1 class="mb-4">Lesson Plan: Countries</h1>
+    
+    <div class="btn-group">
+      <button class="btn btn-lesson" onclick="showSection('introduction')">Introduction</button>
+      <button class="btn btn-lesson" onclick="showSection('countries')">Countries</button>
+    </div>
+
+    <div class="content-section">
+      <div class="card" id="introduction">
+        <div class="card-header">
+          <h2>Introduction</h2>
+        </div>
+        <div class="card-body">
+          <p>Welcome to the lesson on countries! In this lesson, you will learn about major countries around the world. Understanding these basics is essential for global communication and cultural awareness.</p>
+        </div>
+      </div>
+
+      <div class="card" id="countries" style="display:none;">
+        <div class="card-header">
+          <h2>Countries</h2>
+        </div>
+        <div class="card-body">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th class="highlight">Country</th>
+                <th>Example Sentence</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="highlight">USA</td>
+                <td>The USA is a large country in North America.</td>
+              </tr>
+              <tr>
+                <td class="highlight">France</td>
+                <td>France is famous for its wine and cheese.</td>
+              </tr>
+              <tr>
+                <td class="highlight">Japan</td>
+                <td>Japan is known for its technology and culture.</td>
+              </tr>
+              <tr>
+                <td class="highlight">Brazil</td>
+                <td>Brazil is famous for its football and Carnival.</td>
+              </tr>
+              <tr>
+                <td class="highlight">China</td>
+                <td>China has the world's largest population.</td>
+              </tr>
+              <tr>
+                <td class="highlight">Germany</td>
+                <td>Germany is known for its engineering and beer.</td>
+              </tr>
+              <tr>
+                <td class="highlight">India</td>
+                <td>India is known for its diverse cultures and languages.</td>
+              </tr>
+              <tr>
+                <td class="highlight">Russia</td>
+                <td>Russia is the largest country in the world by land area.</td>
+              </tr>
+              <tr>
+                <td class="highlight">Italy</td>
+                <td>Italy is famous for its history, art, and cuisine.</td>
+              </tr>
+              <tr>
+                <td class="highlight">Canada</td>
+                <td>Canada is known for its natural beauty and friendly people.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll('.card').forEach(function(card) {
+        card.style.display = 'none';
+      });
+      document.getElementById(sectionId).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
